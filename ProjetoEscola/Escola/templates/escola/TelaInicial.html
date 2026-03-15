@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Seja bem vindo</h1>
+
+    <a href="{% url 'Escola:adiciona' %}">Clique aqui</a>
+
+    <table border="1">
+        <thead>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Data</th>
+        </thead>
+        <tbody>
+            {% for tarefa in tarefas %}
+            <tr>
+                <td>{{tarefa.nome}}</td>
+                <td>{{tarefa.descricao}}</td>
+                <td>{{tarefa.data}}</td>
+                <td>{{tarefa.situacao}}</td>
+                <td><a href="{% url 'Escola:editar' tarefa.id %}">Editar</a></td>
+                <td><a href="{% url 'Escola:remover' tarefa.id %}">remover</a></td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    
+    
+</body>
+</html>
