@@ -14,6 +14,7 @@
         <thead>
             <th>Nome</th>
             <th>Descrição</th>
+            <th>Situação</th>
             <th>Data</th>
         </thead>
         <tbody>
@@ -21,8 +22,8 @@
             <tr>
                 <td>{{tarefa.nome}}</td>
                 <td>{{tarefa.descricao}}</td>
+                <td>{% if tarefa.situacao %}Concluido{% else %}Pendente{% endif %}</td>
                 <td>{{tarefa.data}}</td>
-                <td>{{tarefa.situacao}}</td>
                 <td><a href="{% url 'Escola:editar' tarefa.id %}">Editar</a></td>
                 <td><a href="{% url 'Escola:remover' tarefa.id %}">remover</a></td>
             </tr>
