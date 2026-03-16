@@ -3,14 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tela inicial</title>
+
 </head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Header{
+    width: auto;
+    height: 60px;
+    background-color: rgb(206, 201, 174);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h2 {
+    padding: 17px;
+}
+
+table{
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 5px;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+
+
+
+
+
+
+</style>
 <body>
-    <h1>Seja bem vindo</h1>
 
-    <a href="{% url 'Escola:adiciona' %}">Clique aqui</a>
+    <header class="Header">
+        
+        <nav>
+            <a href="{% url 'Escola:adiciona' %}">Adicionar</a>
+        </nav>
+    </header>
 
-    <table border="1">
+
+    <h2>Seja bem vindo a tela principal das tarefas</h2>
+
+    
+
+    <table>
         <thead>
             <th>Nome</th>
             <th>Descrição</th>
